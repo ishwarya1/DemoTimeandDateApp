@@ -32,19 +32,8 @@ public class MainActivity extends AppCompatActivity {
         getBtnDisplayTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String hour = tp.getCurrentHour().toString();
-                String minute = tp.getCurrentMinute().toString();
 
-                if(hour.length() == 1) {
-                    hour = "0" + hour;
-                }
-
-                if(minute.length() == 1) {
-                    minute = "0" + minute;
-                }
-
-                String time = hour + ":"+ minute;
-                tvDisplay.setText( "Time is "+  time);
+                tvDisplay.setText( "Time is "+  tp.getCurrentHour() + ":" + tp.getCurrentMinute());
             }
         });
         btnDisplayDate.setOnClickListener(new View.OnClickListener() {
